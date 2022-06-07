@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Página Login</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+ 
+	<div class="container">
+		<div class="container-form">
+			<div class="wrap">
+				<form class="form">
+					<span class="form-title">
+						Faça o seu cadastro
+					</span>
+          <br>
+  
+  <h3 class="form-title-h3"> Você é: </h3>
+          
+          <br>
+          <div id="radio">
+          <input type="radio" id="Refugiada" name="radio" value="ref">
+   <label for="anfitria">Refugiada</label>
+            
+  <input type="radio" id="Anfitria" name="radio" value="Anfitria">
+   <label for="anfitria">Anfitriã</label>
+            <br>
+</div>
+          
+          <div class="wrap-input margin-top-35 margin-bottom-35">
+						<input class="input-form" type="text" name="nome" autocomplete="off" id="nomeid">
+						<span class="focus-input-form" data-placeholder="Nome completo"></span>
+          </div>
+          
+					<div class="wrap-input margin-top-35 margin-bottom-35">
+						<input class="input-form" type="text" name="email" autocomplete="off">
+						<span class="focus-input-form" data-placeholder="E-mail"></span>
+					</div>
+
+          	<div class="wrap-input margin-top-35 margin-bottom-35">
+						<input class="input-form" type="text" name="CPF" autocomplete="off">
+						<span class="focus-input-form" data-placeholder="CPF"></span>
+					</div>
+
+					<div class="wrap-input margin-bottom-35">
+						<input class="input-form" type="password" name="password">
+						<span class="focus-input-form" data-placeholder="Senha"></span>
+					</div>
+
+					<div class="container-form-btn">
+						<button class="form-btn" onclick="Cadastrar();" value="Cadastrar" >
+							Cadastrar
+						</button>
+					</div>
+
+					<ul class="cad-utils">
+						<li class="margin-bottom-8 margin-top-8">
+							<span class="text1">
+								Já possui cadastro?
+							</span>
+
+							<a href="#" class="text2">
+								Login.
+							</a>
+						</li>
+
+						<li>
+							<span class="text1">
+								Em caso de erro reporte
+							</span>
+
+							<a href="#" class="text2">
+								aqui.
+							</a>
+						</li>
+					</ul>
+				</form>
+			</div>
+			<img src="ong.webp" width="600" height="300" class="margin-left-50" />
+		</div>
+	</div>
+
+	<script>
+		let inputs = document.getElementsByClassName('input-form');
+		for (let input of inputs) {
+			input.addEventListener("blur", function() {
+				if(input.value.trim() != ""){
+					input.classList.add("has-val");
+				} else {
+					input.classList.remove("has-val");
+				}
+			});
+		}
+	</script>
+   <script src="script.js"></script>
+
+  <footer> </footer>
+</body>
+
+</html>
